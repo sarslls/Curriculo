@@ -1,0 +1,166 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.8;
+  background-size: cover;
+  color: #333;
+  padding-top: 120px; /* espaço para menu flutuante */
+}
+
+/* --- MENU BLOCO FLUTUANTE --- */
+.menu-blocos {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.bloco {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.bloco:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Blocos coloridos */
+.bloco-sobre {
+  background-color: #C5D0D3; 
+  color: #051F45;
+}
+.bloco-formacao {
+  background-color: #7A8450; 
+  color: rgba(249, 246, 237, 0.9); 
+}
+.bloco-portfolio {
+  background-color: #824C2F; 
+  color: rgba(249, 246, 237, 0.9);
+}
+.bloco-contato {
+  background-color: #EFE095; 
+  color: #824C2F;
+}
+
+/* --- SEÇÕES --- */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem 2rem;
+  background: rgba(249, 246, 237, 0.9); 
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* --- TÍTULOS DE CADA SEÇÃO --- */
+#sobre h1 {
+  color: #051F45; 
+}
+
+#formacao h1 {
+  color: #7A8450;
+}
+
+#portfolio h1 {
+  color: #824C2F; 
+}
+
+#contato h1 {
+  color: #824C2F; 
+}
+
+/* Subtítulos */
+h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+p, li {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Links */
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* --- FORMULÁRIO --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.8rem;
+  border: 1px solid #824C2F;
+  border-radius: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  background-color: #824C2F;
+  color: #F9F6ED;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #EFE095;
+  color: #824C2F;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .menu-blocos {
+    flex-direction: column;
+    align-items: center;
+    top: 10px;
+  }
+
+  .bloco {
+    width: 200px;
+    text-align: center;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+}
